@@ -1,0 +1,6 @@
+# in .cargo/config
+
+[build]
+target = "x86_64-peroxide.json"
+[target.'cfg(target_os = "none")']
+runner = "bootimage runner"

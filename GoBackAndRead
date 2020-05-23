@@ -1,0 +1,5 @@
+- Linker Arguments on
+  https://os.phil-opp.com/freestanding-rust-binary/
+
+- The differences between stable, beta, and nightly channels
+    https://doc.rust-lang.org/book/appendix-07-nightly-rust.html#choo-choo-release-channels-and-riding-the-trains
