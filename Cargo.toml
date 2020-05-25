@@ -4,6 +4,10 @@ version = "0.1.0"
 authors = ["James Laughlin <james@sproutbeat.com>"]
 edition = "2018"
 
+[[test]]
+name = "should_panic"
+harness = false
+
 [dependencies]
 bootloader = "0.9.3"
 volatile = "0.2.6"
@@ -20,5 +24,11 @@ test-args = [
   "-device", "isa-debug-exit,iobase=0xf4,iosize=0x04",
   "-serial", "stdio", "-display", "none"
 ]
+# This position causes the test to fail
+# Even when [ok] is returned.
+# [[test]]
+# name = "should_panic"
+# harness = false
+
 test-success-exit-code = 33         # (0x10 << 1) | 1
 test-timeout = 60          # (in seconds, default 300)
