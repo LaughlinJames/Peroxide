@@ -23,7 +23,8 @@ pub extern "C" fn _start() -> ! {
     test_main();
 
     println!("It did not crash!");
-    loop {}
+    peroxide::hlt_loop();
+    
 }
 
 // This function is called on panic when not running tests.
@@ -31,7 +32,7 @@ pub extern "C" fn _start() -> ! {
 #[panic_handler]
 fn panic(info: &PanicInfo) -> !{
     println!("{}", info);
-    loop{}
+    peroxide::hlt_loop();
 }
 
 // This function is called on panic when running tests.
